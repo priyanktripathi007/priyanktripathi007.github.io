@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "date": "Tue Dec 15 2020 08:48:17 GMT+0530 (India Standard Time)",
+        "archiveDate": "December 2020",
+        "title": "Blog for today",
+        "description":"blog contains information about",
+        "category": "Tech",
+        "readingTime":"7",
+        "tags": [
+            "os",
+            "lib",
+            "dp",
+            "java",
+            "programming"
+        ],
+        "imageUrl": "../../assets/images/dp.jpg",
+        "content": "<div id='foo'><a href='#'>Link</a><span></span></div>"
+    },
+    {
+        "id": 2,
+        "date": "Tue Dec 16 2020 08:48:17 GMT+0530 (India Standard Time)",
+        "archiveDate": "December 2020",
+        "title": "Blog for today",
+        "description":"blog contains information about",
+        "category": "Tech",
+        "readingTime":"7",
+        "tags": [
+            "os",
+            "lib",
+            "dp",
+            "java",
+            "programming"
+        ],
+        "imageUrl": "../../assets/images/profile.jpg",
+        "content": "<div id='foo'><a href='#'>Link</a><span></span></div>"
+    }
+]

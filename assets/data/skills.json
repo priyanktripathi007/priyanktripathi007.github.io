@@ -1,0 +1,36 @@
+[
+    {
+        "category": "Technology Skills",
+        "skills": [
+            {
+                "name": "Java",
+                "score": 100
+            },
+            {
+                "name": "Spring Boot",
+                "score": 100
+            },
+            {
+                "name": "Angular",
+                "score": 100
+            },
+            {
+                "name": "Rest Microservices",
+                "score": 100
+            }
+        ]
+    },
+    {
+        "category": "Tools",
+        "skills": [
+            {
+                "name": "Docker",
+                "score": 80
+            },
+            {
+                "name": "Kubernetes",
+                "score": 80
+            }
+        ]
+    }
+]

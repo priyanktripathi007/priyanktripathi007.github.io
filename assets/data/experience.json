@@ -1,0 +1,24 @@
+[
+    {
+        "type": "Software Development",
+        "years": "4.5",
+        "experiences":[
+            {
+                "company": "Oracle",
+                "companyLogo": "../../assets/images/oracle.jpg",
+                "year": "2018",
+                "role": "Application Engineer",
+                "description": "Implemented functionalities in Core HR Module of Oracle HCM FusionApps"
+            },
+            {
+                "company": "Infosys Limited",
+                "companyLogo": "../../assets/images/infosys.png",
+                "year": "2016",
+                "role": "Specialist Programmer",
+                "description": "Worked on Modernisation of an Loan Lending application"
+            }
+        ]
+    }
+    
+]
+
