@@ -1,38 +1,18 @@
 [
+    
     {
-        "id": 1,
-        "date": "Tue Dec 15 2020 08:48:17 GMT+0530 (India Standard Time)",
-        "archiveDate": "December 2020",
-        "title": "Blog for today",
-        "description":"blog contains information about",
+        "id": "my-first-Test-Blog",
+        "date": "Sun Dec 20 2020 08:48:17 GMT+0530 (India Standard Time)",
+        "archiveDate": "December-2020",
+        "title": "First Blog for my website",
+        "description":"This contains information about my first blog",
         "category": "Tech",
         "readingTime":"7",
         "tags": [
-            "os",
-            "lib",
-            "dp",
-            "java",
-            "programming"
+            "tech",
+            "test",
+            "first"
         ],
-        "imageUrl": "../../assets/images/dp.jpg",
-        "content": "<div id='foo'><a href='#'>Link</a><span></span></div>"
-    },
-    {
-        "id": 2,
-        "date": "Tue Dec 16 2020 08:48:17 GMT+0530 (India Standard Time)",
-        "archiveDate": "December 2020",
-        "title": "Blog for today",
-        "description":"blog contains information about",
-        "category": "Tech",
-        "readingTime":"7",
-        "tags": [
-            "os",
-            "lib",
-            "dp",
-            "java",
-            "programming"
-        ],
-        "imageUrl": "../../assets/images/profile.jpg",
-        "content": "<div id='foo'><a href='#'>Link</a><span></span></div>"
+        "imageUrl": "../../assets/images/profile.jpg"
     }
 ]

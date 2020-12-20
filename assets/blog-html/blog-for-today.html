@@ -1,0 +1,72 @@
+<p>I recently got hold of a <strong>Toshiba Canvio 3TB</strong> external hard disk drive and was
+    trying
+    to format it using <strong>Disk Utility</strong>. To my surprise, I encountered a rather weird
+    error
+    that mentioned MediaKit not having enough space to perform the operation. The exact error
+    message
+    being,</p>
+<p>MediaKit reports not enough space on device for requested operation.</p>
+<p>Though it initially felt like my brand new HDD was a waste now, the solve was not really
+    rocket-science – rather pretty straightforward. So before I tell you how to fix this, let’s
+    first
+    try to understand what the error really meant?</p>
+<h2>What’s the cause?</h2>
+<p>This type of error is generally caused when your EFI partition is below <strong>200 MB</strong>.
+    Mac
+    requires an EFI partition of at least 200 MB to perform any Disk Utility function on an HDD. If
+    your
+    drive came factory formatted in NTFS, chances are your EFI partition would be lesser as Windows
+    can
+    work with a minimum of 100 MB.</p>
+<p>What is <strong>EFI partition</strong> you ask? Well, the EFI system partition (ESP) is a small
+    partition formatted with FAT32, usually 100 MB, which stores the EFI boot loaders for the
+    installed
+    system and applications used by the firmware at startup.</p>
+<h2>So how to fix this?</h2>
+<p>Before we begin,</p>
+<div class="wp-block-group">
+    <div class="wp-block-group__inner-container">
+        <blockquote class="wp-block-quote">
+            <p>Please note that all data on the HDD will be lost. I do not take any responsibility
+                whatsoever in the unlikely event that your HDD gets bricked. By following these
+                instructions, you agree to take full responsibility for the consequences.</p>
+        </blockquote>
+    </div>
+</div>
+<p>Alright, now let’s fire up <strong>Terminal</strong> to get the name of the HDD you are trying to
+    fix. Type the command below to list down all drives. Look for the label “<strong>external,
+        physical</strong>” and note its Identifier. In my case it’s <strong>disk2</strong>. Could be
+    different for you.</p>
+<p><code>diskutil list</code></p>
+<p><img loading="lazy" width="500" height="350" class="wp-image-1892" style="width: 500px;"
+        src="https://priyanksharma.com/wp-content/uploads/mediakit-reports-not-enough-space-on-device-for-requested-operation-1.jpg"
+        alt=""></p>
+<p>Now let’s force unmount the disk (and all volumes on it) by typing in,</p>
+<p><code>diskutil unmountDisk force <span class="has-inline-color has-light-slate-blue-color">disk2</span></code>
+</p>
+<p>And then write zeros to the boot sector by typing in,</p>
+<p><code>sudo dd if=/dev/zero of=/dev/<span class="has-inline-color has-light-slate-blue-color">disk2</span> bs=1024 count=1024</code>
+</p>
+<p>You will be asked to enter your administrator password. Go ahead and do it. Note that entering a
+    password in Terminal will cause your cursor not to move. Your input will be accepted anyway.</p>
+<p><img loading="lazy" width="500" height="350" class="wp-image-1895" style="width: 500px;"
+        src="https://priyanksharma.com/wp-content/uploads/mediakit-reports-not-enough-space-on-device-for-requested-operation-2.jpg"
+        alt=""></p>
+<p>Finally, let’s go ahead and partition it. Again, in my case it’s <strong>disk2</strong>. Could be
+    different for you. Type in,</p>
+<p><code>diskutil partitionDisk <span class="has-inline-color has-light-slate-blue-color">disk2</span> GPT JHFS+ "<span class="has-inline-color has-light-slate-blue-color">Canvio</span>" 0g</code>
+</p>
+<p>Where <strong>Canvio</strong> is what you want to name your HDD. This will also format your drive
+    and
+    make it ready for use.</p>
+<p><img loading="lazy" width="500" height="350" class="wp-image-1896" style="width: 500px;"
+        src="https://priyanksharma.com/wp-content/uploads/mediakit-reports-not-enough-space-on-device-for-requested-operation-3.jpg"
+        alt=""></p>
+<p>That’s it, you are done! Do share your feedback/experience in the comment section below.</p>
+<blockquote class="wp-block-quote">
+    <p>If for some reason, you are asked to enter your password again when performing basic
+        functions on
+        the HDD (like creating folders), unmount and then mount the disk again. That should resolve
+        any
+        issues.</p>
+</blockquote>
