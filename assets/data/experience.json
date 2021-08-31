@@ -1,8 +1,15 @@
 [
     {
-        "type": "Software Development",
-        "years": "4.5",
+        "type": "Software Development & Design",
+        "years": "5",
         "experiences":[
+            {
+                "company": "Amazon",
+                "companyLogo": "../../assets/images/amazon.jpg",
+                "year": "2018",
+                "role": "Software Development Engineer 2",
+                "description": "Designed and implemented an analytics portal end to end for SDP"
+            },
             {
                 "company": "Oracle",
                 "companyLogo": "../../assets/images/oracle.jpg",

@@ -17,12 +17,24 @@
             {
                 "name": "Rest Microservices",
                 "score": 100
+            },
+            {
+                "name": "React",
+                "score": 100
+            },
+            {
+                "name": "Python",
+                "score": 100
             }
         ]
     },
     {
-        "category": "Tools",
+        "category": "Cloud Tools",
         "skills": [
+            {
+                "name": "AWS Cloud- ApiGateway,Lambda,Glue,CDK,Airflow,SNS,SQS,Cloudwatch",
+                "score": 100
+            },      
             {
                 "name": "Docker",
                 "score": 80
